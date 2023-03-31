@@ -11,7 +11,7 @@ cd /work/pi_adrozdov_umass_edu/syerawar_umass_edu/696DS
 module load conda
 
 #Initialize Environment
-conda activate ./envs/vadops
+conda activate ../envs/vadops
 
 #cd ./TextClassification
 

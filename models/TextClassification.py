@@ -83,6 +83,7 @@ if __name__ == "__main__":
     arg_list = sys.argv
     lr = float(sys.argv[1])
     dataset_name = sys.argv[2]
+    num_epochs = int(sys.argv[3])
     all_dataset = get_dataset(dataset_name)
     
     tokenizer = AutoTokenizer.from_pretrained("roberta-base")
@@ -112,7 +113,7 @@ if __name__ == "__main__":
         learning_rate=lr,
         per_device_train_batch_size=16,
         per_device_eval_batch_size=16,
-        num_train_epochs=2,
+        num_train_epochs=num_epochs,
         weight_decay=0.01,
         evaluation_strategy="epoch",
         save_strategy="epoch",
